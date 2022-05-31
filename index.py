@@ -37,7 +37,6 @@ new_content = ""
 for url in urls:
     custom_uid = uuid4().__str__()[:4]
     download_file(f"{url[:-1]}", f"fonts/{get_cur_font(url[:-1])}{custom_uid}.woff2")
-    print(url[:-1])
     print(get_cur_font(url[:-1]))
     content_ = content_.replace(url[:-1], f'fonts/{get_cur_font(url[:-1])}{custom_uid}.woff2')
 
